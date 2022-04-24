@@ -1,6 +1,6 @@
 # Forza Horizon 5 Rank Calculator
 Ever wanted to know what your current total rank is in Forza Horizon 5? Then I have the solution for you. And all this for the absolutely low price of 999 Super Wheelspins!
-Jokes aside. Here you can now calculate your absolute rank in the lovely design of the in-game tuning menu:  
+Jokes aside. Here you can now calculate your total rank in the lovely design of the in-game tuning menu:  
 [https://thetorbey.github.io/Forza-Horizon-5-Rank-Calculator/](https://thetorbey.github.io/Forza-Horizon-5-Rank-Calculator/)
 
 **For that extra spice, you can also control the menu with a keyboard (WASD / arrow keys) or an Xbox controller (joystick / D-pad)!**
