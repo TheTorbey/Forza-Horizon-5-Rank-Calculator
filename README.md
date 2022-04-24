@@ -3,7 +3,9 @@ Ever wanted to know what your current total rank is in Forza Horizon 5? Then I h
 Jokes aside. Here you can now calculate your absolute rank in the lovely design of the in-game tuning menu:  
 [https://thetorbey.github.io/Forza-Horizon-5-Rank-Calculator/](https://thetorbey.github.io/Forza-Horizon-5-Rank-Calculator/)
 
-**For that extra spice, you can also control the site with the keyboard (WASD / arrow keys) or the Xbox controller (joystick / D-pad)!**
+**For that extra spice, you can also control the menu with a keyboard (WASD / arrow keys) or an Xbox controller (joystick / D-pad)!**
+
+**Note:** Since Forza Horizon 4 used the same ranking system, you can also this tool as a FH4 player.
 
 ## About the Prestige System
 > Prestige is first awarded once you've earned enough Global Influence to reach Rank 200. 
