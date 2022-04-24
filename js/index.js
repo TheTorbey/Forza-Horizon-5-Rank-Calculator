@@ -45,10 +45,10 @@ function updateTotalLevel() {
 function handlePrestigeRange() {
     const max = rankLevels[prestigeRange.value]
     levelRange.max = max
-    
+
     if (levelRange.value > max) levelRange.value = max
     levelRange.style.setProperty('--max', max)
     levelRange.style.setProperty('--progress', levelRange.value)
-    
+
     updateProgress(levelRange, true)
 }

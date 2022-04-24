@@ -115,12 +115,12 @@ function menuHorizontal(direction) {
     const slider = option.querySelector('input[type=range]')
     const tmpEvent = new Event('input')
     const currentDate = Date.now()
-    
+
     if (!slider) return
 
     let step = parseFloat(slider.dataset.step) * horizontalMultiplier
     if (!KEYBOARD_ACTIVE) step * gamepadMultiplier
-    
+
     if (direction === 'left') slider.value = parseFloat(slider.value) - step
     if (direction === 'right') slider.value = parseFloat(slider.value) + step
 
@@ -144,7 +144,7 @@ function gamepadHandler(event) {
 
     if (connecting) gamepads[gamepad.index] = gamepad
     else delete gamepads[gamepad.index]
-    
+
     requestAnimationFrame(gamepadLoop)
 }
 
@@ -157,7 +157,7 @@ function setActiveGamepad() {
     for (const gamepad of Object.values(gamepads)) {
 
         if (ACTIVE_GAMEPAD != null && ACTIVE_GAMEPAD.id == gamepad.id) ACTIVE_GAMEPAD = gamepad
-        
+
         const axes = getAxes(gamepad)
 
         Object.values(axes).forEach(axis => {
@@ -183,7 +183,7 @@ function gamepadLoop() {
 
     const axes = getAxes(ACTIVE_GAMEPAD)
     const currentDate = Date.now()
-    
+
     // Allow xbox controllers to control the options with the sticks or the d-pad
     if (currentDate - lastGamepadMenuActivity >= gamepadMenuCooldown && !KEYBOARD_ACTIVE) {
 

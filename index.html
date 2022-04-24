@@ -1,100 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forza Horizon 5 Rank Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="js/index.js" defer></script>
-    <script src="js/controls.js" defer></script>
-</head>
-<body>
-    <section class="topbar">
-        <div class="name"><span class="font-align">TheTorbey</span></div>
-        <div class="project-name"><span class="font-align">Forza Horizon 5 Rank Calculator</span></div>
-    </section>
-    <section class="tuning-container">
-        <section class="tuning">
-            <section class="result">
-                <header>
-                    <h2 class="font-align">Result</h2>
-                </header>
-                <article>
-                    <span>Rank level calculation</span>
-                    <dl>
-                        <dt>Total rank level</dt>
-                        <dd id="total-level-output">0</dd>
-                    </dl>
-                </article>
-            </section>
-            <section class="settings">
-                <article>
-                    <section>
-                        <header><h2 class="font-align">Rank</h2></header>
-                        <div class="option" data-ident="1">
-                            <span class="option-name font-align">Prestige</span>
-                            <div class="slider">
-                                <input type="range" name="prestige" id="prestige" min="0" max="10" value="0" data-step="1">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forza Horizon 5 Rank Calculator</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="js/index.js" defer></script>
+        <script src="js/controls.js" defer></script>
+    </head>
+
+    <body>
+        <section class="topbar">
+            <div class="name"><span class="font-align">TheTorbey</span></div>
+            <div class="project-name"><span class="font-align">Forza Horizon 5 Rank Calculator</span></div>
+        </section>
+        <section class="tuning-container">
+            <section class="tuning">
+                <section class="result">
+                    <header>
+                        <h2 class="font-align">Result</h2>
+                    </header>
+                    <article>
+                        <span>Rank level calculation</span>
+                        <dl>
+                            <dt>Total rank level</dt>
+                            <dd id="total-level-output">0</dd>
+                        </dl>
+                    </article>
+                </section>
+                <section class="settings">
+                    <article>
+                        <section>
+                            <header>
+                                <h2 class="font-align">Rank</h2>
+                            </header>
+                            <div class="option" data-ident="1">
+                                <span class="option-name font-align">Prestige</span>
+                                <div class="slider">
+                                    <input type="range" name="prestige" id="prestige" min="0" max="10" value="0" data-step="1">
+                                </div>
+                                <span class="output font-align">1</span>
                             </div>
-                            <span class="output font-align">1</span>
-                        </div>
-                    </section>
-                    <section>
-                        <header><h2 class="font-align">Rank</h2></header>
-                        <div class="option" data-ident="2">
-                            <span class="option-name font-align">Level</span>
-                            <div class="slider">
-                                <input type="range" name="level" id="level" min="1" max="200" value="1" data-step="1">
+                        </section>
+                        <section>
+                            <header>
+                                <h2 class="font-align">Rank</h2>
+                            </header>
+                            <div class="option" data-ident="2">
+                                <span class="option-name font-align">Level</span>
+                                <div class="slider">
+                                    <input type="range" name="level" id="level" min="1" max="200" value="1" data-step="1">
+                                </div>
+                                <span class="output font-align">50</span>
                             </div>
-                            <span class="output font-align">50</span>
-                        </div>
-                    </section>
-                </article>
-            </section>
-            <section class="description">
-                <header>
-                    <h2 class="font-align">Description</h2>
-                </header>
-                <article data-ident-description="1">
-                    The Prestige system recognizes experienced players in the Forza Horizon 5 community. <br>
-                    Prestige is first awarded once you've earned enough Global Influence to reach Rank 200. <br>
-                    Throughout Forza Horizon 5, players with Prestige levels are identified by a numbered star next to their Gamertag. When you Prestige, you will revert to Rank 1, and your new Prestige star distinguishes your experience. This is visible to all other players.
-                </article>
-                <article data-ident-description="2">
-                    The rank level is displayed next to the Gamertag. Together with Prestige it gives information about a player's rank. With each increase in prestige, the number of required ranks also increases.
-                </article>
+                        </section>
+                    </article>
+                </section>
+                <section class="description">
+                    <header>
+                        <h2 class="font-align">Description</h2>
+                    </header>
+                    <article data-ident-description="1">
+                        The Prestige system recognizes experienced players in the Forza Horizon 5 community. <br>
+                        Prestige is first awarded once you've earned enough Global Influence to reach Rank 200. <br>
+                        Throughout Forza Horizon 5, players with Prestige levels are identified by a numbered star next to their Gamertag. When you Prestige, you will revert to Rank 1, and your new Prestige star distinguishes your experience. This is visible to all other players.
+                    </article>
+                    <article data-ident-description="2">
+                        The rank level is displayed next to the Gamertag. Together with Prestige it gives information about a player's rank. With each increase in prestige, the number of required ranks also increases.
+                    </article>
+                </section>
             </section>
         </section>
-    </section>
-    <footer>
-        <div class="controls">
-            <div class="control">
-                <span class="font-align">Menu can also be controlled with keyboard or Xbox controller</span>
-            </div>
-            <div class="control">
-                <span class="font-align">Do you like my work?</span>
-                <div id="donate-button-container">
-                    <div id="donate-button"></div>
-                    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-                    <script>
-                        PayPal.Donation.Button({
-                            env: 'production',
-                            hosted_button_id: '6ZWX4JDGGGNXL',
-                            image: {
-                                src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
-                                alt: 'Donate with PayPal button',
-                                title: 'PayPal - The safer, easier way to pay online!',
-                            }
-                        }).render('#donate-button');
-                    </script>
+        <footer>
+            <div class="controls">
+                <div class="control">
+                    <span class="font-align">Menu can also be controlled with keyboard or Xbox controller</span>
                 </div>
-            </div>
-            
-        </div>
-        <div class="donation">
-        </div>
-    </footer>
+                <div class="control">
+                    <span class="font-align">Do you like my work?</span>
+                    <div id="donate-button-container">
+                        <div id="donate-button"></div>
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                            PayPal.Donation.Button({
+                                env: 'production',
+                                hosted_button_id: '6ZWX4JDGGGNXL',
+                                image: {
+                                    src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+                                    alt: 'Donate with PayPal button',
+                                    title: 'PayPal - The safer, easier way to pay online!',
+                                }
+                            }).render('#donate-button');
+                        </script>
+                    </div>
+                </div>
 
-</body>
+            </div>
+            <div class="donation">
+            </div>
+        </footer>
+
+    </body>
+
 </html>
