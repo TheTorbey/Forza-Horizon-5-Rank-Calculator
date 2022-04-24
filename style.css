@@ -1,0 +1,494 @@
+/* FONTS */
+@font-face {
+    font-family: 'Hind Guntur';
+    src: url(fonts/HindGuntur-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Hind Guntur';
+    src: url(fonts/HindGuntur-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Hind Guntur';
+    src: url(fonts/HindGuntur-Medium.ttf) format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Hind Guntur';
+    src: url(fonts/HindGuntur-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Hind Guntur';
+    src: url(fonts/HindGuntur-Bold.ttf) format('truetype');
+    font-weight: 700;
+}
+
+/* GENERAL */
+:root {
+    font-size: clamp(24px, calc(8px + 1vw), 100vw);
+    font-family: 'Hind Guntur', sans-serif;
+    letter-spacing: -1px;
+    overflow: hidden;
+    background: url(images/fh5.jpg) no-repeat center/cover;
+    user-select: none;
+
+    /* COLORS */
+    --purple: hsl(298, 39%, 15%);
+    --yellow: hsl(50, 81%, 59%);
+    --pink: hsl(329, 100%, 50%);
+    --gray: hsl(35, 12%, 72%);
+    --seperator-dark: hsl(40, 5%, 33%);
+    --seperator-light: hsl(31, 12%, 54%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    overflow: auto;
+}
+
+.font-align {
+    margin-bottom: -0.3rem !important;
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    place-content: space-between;
+    padding: clamp(1rem, 5vh, 3rem) clamp(1rem, 5vw, 5rem);
+}
+
+.name,
+.project-name {
+    display: flex;
+    place-items: center;
+    line-height: 1rem;
+    border-radius: 0.1rem;
+    overflow: hidden;
+    font-weight: 700;
+    box-shadow: 0px 0px 10px 0px hsl(0 0% 0% / 5%);
+}
+
+.name::after,
+.project-name::before {
+    width: 1.7rem;
+    height: 100%;
+    flex: 1 0 auto;
+}
+
+.name {
+    background-color: hsl(0 0% 0% / 25%);
+    color: var(--yellow);
+}
+
+.name span {
+    padding: 0.5rem;
+}
+
+.name::before {
+    content: '1';
+    background: #FFFFFF;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    width: 2.25rem;
+    height: 100%;
+    color: #000000;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    padding-top: 0.3rem;
+    order: -2;
+    flex: 1 0 auto;
+}
+
+.name::after {
+    content: '';
+    background: #000000 url(images/torbey.jpg) no-repeat center/contain;
+    order: -1;
+}
+
+.project-name {
+    background-color: hsl(0deg 0% 0% / 25%);
+    background: linear-gradient(90deg, hsl(33, 76%, 44%) 5%, hsl(49, 93%, 67%) 25%, hsl(41, 61%, 49%) 50%, hsl(49, 96%, 68%) 75%, hsl(42, 77%, 45%) 100%);
+    color: hsl(0, 0%, 0%);
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+}
+
+.project-name span {
+    padding: 0.5rem 1.25rem;
+}
+
+.project-name::before {
+    content: '';
+    background: #FFFFFF url(images/accolade.png) no-repeat center/contain;
+}
+
+/* MAIN CONTENT */
+.tuning-container {
+    display: flex;
+    place-content: center;
+    width: 100%;
+    margin-top: calc(5vw - 1rem);
+    margin-bottom: calc(5vw + 1rem);
+}
+
+.tuning {
+    display: flex;
+    flex-direction: column;
+    gap: .125rem;
+    width: 100%;
+    max-width: clamp(1rem, 85vw, 90vw);
+}
+
+.tuning header {
+    background-color: var(--purple);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.tuning .settings h2 {
+    line-height: 2;
+    padding: 0 0.75rem;
+}
+
+/* PANELS */
+.result,
+.description {
+    min-width: 300px;
+}
+
+.tuning>section {
+    display: flex;
+    flex-direction: column;
+}
+
+.tuning>section>article {
+    padding: 0.5rem 0.75rem;
+    flex: 1;
+}
+
+/* RESULT PANEL */
+.result span {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: -1px;
+    display: flex;
+    border-bottom: 0.075rem solid var(--seperator-dark);
+}
+
+.result dl {
+    margin: 0;
+    display: flex;
+}
+
+.result dt,
+.result dd {
+    flex: 1;
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.25;
+    padding: 0.25rem 0 0 0;
+    text-transform: uppercase;
+    border-bottom: 0.075rem solid var(--seperator-dark);
+}
+
+.result dt {
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.result dd {
+    text-align: end;
+    font-weight: 700;
+}
+
+/* SETTINGS PANEL */
+.settings {
+    z-index: 1;
+    min-width: 300px;
+}
+
+.tuning .settings h2 {
+    justify-content: flex-start;
+}
+
+.tuning .settings>article {
+    margin: 0;
+    padding: 0;
+}
+
+/* SETTINGS PANEL -> OPTIONS */
+.settings .option {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    left: 50%;
+    padding: 0 0.25rem;
+    border-radius: 0.1rem;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 0px hsl(0 0% 0% / 5%);
+    color: var(--purple);
+}
+
+.settings .option.active {
+    width: calc(100% + .5rem);
+    color: #FFFFFF;
+    background-color: var(--pink);
+}
+
+.settings .option span {
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+.settings .option .option-name {
+    width: 100%;
+}
+
+.settings .option .slider {
+    display: flex;
+    place-items: center;
+    flex: 1;
+}
+
+.settings .option .output {
+    width: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: end;
+}
+
+/* SLIDER SETTINGS */
+.settings .option input[type=range] {
+    --thumb-size-outer: 0.6rem;
+    --lower-track-color: var(--purple);
+
+    --range: calc(var(--max) - var(--min));
+    --ratio: calc((var(--progress) - var(--min)) / var(--range));
+    --percentage: calc(0.5 * var(--thumb-size-outer) + var(--ratio) * (100% - var(--thumb-size-outer)));
+    width: 100%;
+    height: 0.125rem;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+}
+
+.settings .option.active input[type=range] {
+    --lower-track-color: #FFFFFF;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    --thumb-size: 0.55rem;
+    -webkit-appearance: none;
+    margin-top: 0;
+    border: 1px solid #000000;
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    border-radius: 50%;
+    outline-offset: 0.025rem;
+    outline: 0.09rem solid var(--purple);
+    background-color: var(--purple);
+    cursor: pointer;
+    margin-top: calc(var(--thumb-size) / 2 * -1 + 0.05rem);
+}
+
+.settings .option.active input[type=range]::-webkit-slider-thumb {
+    --thumb-size: 0.6rem;
+    background-color: #FFFFFF;
+    outline-offset: 0;
+    border: 0.1rem solid #FFFFFF;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.125rem;
+    cursor: pointer;
+    background: #3071a9;
+    background: linear-gradient(var(--lower-track-color), var(--lower-track-color)) 0/var(--percentage) 100% no-repeat, hsl(0 0% 0% / 15%);
+}
+
+/* SAME FOR MOZILLA */
+input[type=range]::-moz-range-thumb {
+    --thumb-size: 0.55rem;
+    border: 1px solid #000000;
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    border-radius: 50%;
+    outline-offset: 0.025rem;
+    outline: 0.09rem solid var(--purple);
+    background-color: var(--purple);
+    cursor: pointer;
+}
+
+.settings .option.active input[type=range]::-moz-range-thumb {
+    --thumb-size: 0.575rem;
+    background-color: #FFFFFF;
+    outline-offset: 0;
+    border: 0.1rem solid #FFFFFF;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 0.125rem;
+    cursor: pointer;
+    background: #3071a9;
+    background: linear-gradient(var(--lower-track-color), var(--lower-track-color)) 0/var(--percentage) 100% no-repeat, hsl(0 0% 0% / 15%);
+}
+
+/* TUNING PANEL */
+.tuning h2 {
+    margin: 0;
+    font-size: 1rem;
+    display: flex;
+    place-content: center;
+}
+
+.tuning article {
+    font-size: 0.75rem;
+    letter-spacing: 0;
+    line-height: 1.5;
+    color: #FFFFFF;
+    margin-top: 0.125rem;
+    background-color: hsl(0 0% 0% / 25%);
+    backdrop-filter: blur(50px);
+}
+
+/* DESCRIPTION PANEL */
+.description article[data-ident-description]:not(.show) {
+    display: none;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding: 2rem;
+}
+
+footer .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: #FFFFFF;
+}
+
+footer .controls .control {
+    background-color: var(--purple);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem;
+    font-size: 0.75rem;
+    letter-spacing: 0;
+}
+
+footer .controls .control > span {
+    padding: 0 0.5rem;
+}
+
+/* PAYPAL */
+#donate-button {
+    display: flex;
+    height: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 960px) {
+    .tuning {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .settings {
+        flex: 2;
+    }
+
+    .settings .option {
+        flex-wrap: nowrap;
+    }
+
+    .settings .option .option-name {
+        /* width: ; */
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    .result,
+    .description {
+        flex: 1;
+    }
+
+    .tuning {
+        align-content: stretch;
+    }
+
+    .tuning-container {
+        height: 50vh;
+    }
+}
+
+@media(hover: hover) and (pointer: fine) {
+    .settings .option:hover input[type=range]::-webkit-slider-thumb {
+        --thumb-size: 0.6rem;
+        background-color: #FFFFFF;
+        outline-offset: 0;
+        border: 0.1rem solid #FFFFFF;
+    }
+
+    input[type=range]::-webkit-slider-thumb:hover {
+        background-color: var(--purple) !important;
+    }
+
+    .settings .option:hover input[type=range]::-moz-range-thumb {
+        --thumb-size: 0.575rem;
+        background-color: #FFFFFF;
+        outline-offset: 0;
+        border: 0.1rem solid #FFFFFF;
+    }
+
+    input[type=range]::-moz-range-thumb:hover {
+        background-color: var(--purple) !important;
+    }
+}
