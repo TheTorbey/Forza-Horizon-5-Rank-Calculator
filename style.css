@@ -95,20 +95,88 @@ body {
     padding: 0.5rem;
 }
 
-.name::before {
-    content: '1';
-    background: #FFFFFF;
+#topbar__level {
+    position: relative;
+    background: #F1F1F1;
     display: flex;
     place-content: center;
     place-items: center;
-    width: 2.25rem;
+    min-width: 1.25rem;
     height: 100%;
-    color: #000000;
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-    padding-top: 0.3rem;
-    order: -2;
+    color: #333333;
+    font-size: 1rem;
+    padding: 0.35rem 0.5rem 0;
+    order: -1;
     flex: 1 0 auto;
+}
+
+#topbar__level[data-color="yellow"] {
+    background-color: #FEDD00;
+}
+
+#topbar__level[data-color="orange"] {
+    background-color: #FF9820;
+    color: #FFFFFF;
+}
+
+#topbar__level[data-color="green"] {
+    background-color: #13E347;
+    color: #FFFFFF;
+}
+
+#topbar__level[data-color="cyan"] {
+    background-color: #41FFDB;
+}
+
+#topbar__level[data-color="blue"] {
+    background-color: #008CFD;
+    color: #FFFFFF;
+}
+
+#topbar__level[data-color="purple"] {
+    background-color: #9329fa;
+    color: #FFFFFF;
+}
+
+#topbar__level[data-color="red"] {
+    background-color: #D91517;
+    color: #FFFFFF;
+}
+
+#topbar__level[data-color="pink"] {
+    background-color: #EB3E8D;
+    color: #FFFFFF
+}
+
+#topbar__level[data-color="bronze"] {
+    background: linear-gradient(to top right,rgba(193, 21, 8, 1) 0%, rgba(234, 131, 54, 1) 100%);
+    color: #000000;
+}
+
+#topbar__level[data-color="silver"] {
+    background: linear-gradient(to top right,rgb(150, 175, 185) 15%, rgb(215, 227, 239) 60%, rgb(255, 255, 255) 85%);
+    color: #000000;
+}
+
+#topbar__level[data-color="gold"] {
+    background: linear-gradient(to top right,rgba(220, 134, 33, 1) 0%, rgba(237, 251, 51, 1) 100%);
+    color: #000000;
+}
+
+#topbar__level:not([data-prestige="0"])::before {
+    content: '★';
+    font-size: 0.85rem;
+    margin: -0.65rem 0.25rem 0 0;
+}
+
+#topbar__level:not([data-prestige="0"])::after {
+    content: attr(data-prestige);
+    position: absolute;
+    font-size: 0.7rem;
+    width: 0.75rem;
+    text-align: center;
+    left: 0.47rem;
+    bottom: 0.125rem;
 }
 
 .name::after {
